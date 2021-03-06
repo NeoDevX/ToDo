@@ -106,13 +106,12 @@ export default class App extends Component {
         switch(filter) {
             case 'all':
                 return items;
-                break;
             case 'active':
                 return items.filter((item) => !item.done);
-                break;
             case 'done':
                 return items.filter((item) => item.done);
-                break;
+            default:
+                return items
         }
     } 
 
